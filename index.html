@@ -31,6 +31,7 @@
             padding: 10px;
             margin: 0 10px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         section {
@@ -55,10 +56,10 @@
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#games">Featured Games</a>
-        <a href="#contact">Contact</a>
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('about')">About Us</a>
+        <a onclick="scrollToSection('games')">Featured Games</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
     </nav>
 
     <section id="home">
@@ -91,6 +92,12 @@
     <footer>
         <p>&copy; 2024 Speedruntards Community</p>
     </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
